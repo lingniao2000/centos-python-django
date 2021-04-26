@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "---> Building application from source..."
+source ~/.bashrc
+
+if [[ -f requirements.txt ]]; then
+  echo "---> [!] Installing dependencies with pip"
+  pip install -r requirements.txt
+fi
+
+# sphinx make html
+function is_sphinx_installed() {
+  hash sphinx-build &>/dev/null
+}
+
+function should_sphinx_build() {
+  is_sphinx_installed && [[ -z "${DISABLE_SPHINX_BUILD}" ]]
+}
+
+function sphinx_build() {
+  if should_sphinx_build; then
+    cd "${DOC_PATH:-docs}" || exit
+    make html
+  fi
+}
+
+sphinx_build
