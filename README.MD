@@ -16,3 +16,12 @@ django project runtime docker image builder based on centos, and now compatible 
 
 $ make image && make push
 ```
+
+## Vulnerabilities
+
+```shell
+# login docker.hub.com
+docker scan centos8-python-django
+
+# there maybe some vulnerabilities, headache !!!
+```

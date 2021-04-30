@@ -12,3 +12,6 @@ eval "$(direnv hook bash)"
 
 # sqlite3 update
 export LD_LIBRARY_PATH="/usr/local/sqlite/lib"
+
+# 兼容 s2i 环境变量定义
+source ~/.s2i/environment

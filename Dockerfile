@@ -4,7 +4,7 @@
 # 3. pyenv 安装指定 python 版本
 # 4. pip 安装 python 基础依赖包
 
-FROM centos:7
+FROM centos:8
 
 LABEL maintainer="peizhenfei"
 
