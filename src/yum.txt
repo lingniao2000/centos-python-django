@@ -9,3 +9,4 @@ libffi-devel
 wget
 git
 gcc
+make
