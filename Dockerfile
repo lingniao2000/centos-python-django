@@ -18,7 +18,7 @@ COPY ./src/ .
 
 RUN bash pre_hooks.sh && rm -rf pre_hooks.sh && \
 	yum update -y && yum install -y $(cat yum.txt | tr '\n' ' ') && rm -rf yum.txt && \
-	bash vendors/installer.sh && rm -rf verdors && \
+	bash vendors/installer.sh && rm -rf vendors && \
 	bash post_hooks.sh && rm -rf post_hooks.sh && \
     yum -y clean all --enablerepo='*'
 

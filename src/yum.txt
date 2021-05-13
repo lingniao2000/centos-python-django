@@ -10,3 +10,4 @@ wget
 git
 gcc
 make
+nss

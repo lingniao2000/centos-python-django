@@ -9,8 +9,9 @@ scan:
 	docker scan $(IMAGE_NAME):$(TAG)
 
 push:
+	#docker rmi $(REGISTRY)/$(IMAGE_NAME):$(TAG)
 	docker tag $(IMAGE_NAME) $(REGISTRY)/$(IMAGE_NAME):$(TAG)
 	docker push $(REGISTRY)/$(IMAGE_NAME):$(TAG)
 
 make:
-	make image && make scan && make push
+	make image && make push
