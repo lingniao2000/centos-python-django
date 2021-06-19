@@ -8,7 +8,7 @@ echo "----install from vendors begin----"
 # shellcheck disable=SC2045
 for file in $(ls ${VENDOR_ROOT}); do
   if [ -d ${VENDOR_ROOT}/"${file}" ]; then
-    bash "${VENDOR_ROOT}/${file}/installer.sh" "${VENDOR_ROOT}/${file}"
+    bash "${VENDOR_ROOT}/${file}/installer.sh"
   fi
 done
 

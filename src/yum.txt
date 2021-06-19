@@ -7,6 +7,7 @@ bzip2-devel
 bzip2-libs
 libffi-devel
 wget
+unzip
 git
 gcc
 make
