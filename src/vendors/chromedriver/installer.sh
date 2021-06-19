@@ -12,7 +12,7 @@ FILENAME=chromedriver_linux64.zip
 VERSION=$(curl ${DOMAIN}/LATEST_RELEASE)
 DRIVER=${DOMAIN}/${VERSION}/${FILENAME}
 wget "${DRIVER}" && unzip ${FILENAME} && rm -rf ${FILENAME}
-mv ./chromedriver /user/local/bin/chromedriver
+mv chromedriver /usr/local/bin/chromedriver
 echo " [!] install end: chromedriver linux64"
 
 echo "----$1 install end----"
