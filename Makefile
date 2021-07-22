@@ -1,5 +1,5 @@
 IMAGE_NAME=centos8-python-django
-REGISTRY=registry.gz.cvte.cn/infra
+REGISTRY=xxx.xxx.xxx
 TAG=latest
 
 image:
